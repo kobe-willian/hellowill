@@ -1,0 +1,99 @@
+.third-component {
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.third-component * {
+  color: #FEFEFE;
+  text-align: center;
+}
+
+.third-component .component__content {
+  padding-bottom: 7.246vw;
+  position: relative;
+  z-index: 2;
+}
+
+.third-component .component__title {
+  margin-bottom: 3.623vw;
+}
+
+.third-component .mouse-animate {
+  bottom: 60px;
+  position: absolute;
+}
+
+.third-component .mouse-animate .mouse-animate__content {
+  border-color: #FEFEFE;
+}
+
+.third-component .mouse-animate .mouse-animate__scroll {
+  background-color: #FEFEFE;
+}
+
+.third-component .logo {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+}
+
+.third-component .logo-php {
+  left: 15%;
+  top: 15%;
+  transform: rotate(10deg);
+}
+
+.third-component .logo-react {
+  left: 80%;
+  top: 10%;
+  width: 110px;
+}
+
+.third-component .logo-node {
+  height: 60px;
+  left: 75%;
+  top: 70%;
+  transform: rotate(-5deg);
+  width: 60px;
+}
+
+.third-component .logo-laravel {
+  height: 50px;
+  left: 22%;
+  top: 70%;
+  width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .third-component .component__title {
+    margin-bottom: 30px;
+  }
+
+  .third-component .logo-php {
+    height: 50px;
+    width: 50px;
+    top: 20px;
+  }
+
+  .third-component .logo-react {
+    height: 60px;
+    left: 65%;
+    top: 5%;
+    width: 90px;
+  }
+
+  .third-component .logo-node {
+    height: 50px;
+    top: 88%;
+    width: 50px;
+  }
+
+  .third-component .logo-laravel {
+    height: 40px;
+    width: 40px;
+    top: 85%;
+  }
+}

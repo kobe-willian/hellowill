@@ -1,0 +1,74 @@
+.first-component {
+  align-items: center;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.first-component .component__content {
+  display: grid;
+  grid-column-gap: 7.246vw;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  "image title"
+  "image text";
+  padding-bottom: 7.246vw;
+}
+
+.first-component .component__title {
+  grid-area: title;
+}
+
+.first-component .component__text {
+  grid-area: text;
+}
+
+.first-component .component__image {
+  display: flex;
+  justify-content: center;
+  grid-area: image;
+  padding-top: 20px;
+  position: relative;
+}
+
+.first-component .component__image .image-shadow,
+.first-component .component__image .image {
+  border-radius: 5px;
+  display: block;
+  height: 420px;
+  width: 330px;
+}
+
+.first-component .component__image .image-shadow {
+  background-color: #333;
+  margin-left: 20px;
+  margin-top: -20px;
+  position: absolute;
+}
+
+.first-component .component__image .image {
+  background-image: url('../../assets/Willian.jpg');
+}
+
+.first-component .mouse-animate {
+  bottom: 60px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+  .first-component .component__content {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+    grid-template-areas:
+    "title"
+    "text"
+    "image";
+  }
+
+  .first-component .component__image .image-shadow,
+  .first-component .component__image .image {
+    height: 240px;
+    width: 180px;
+  }
+}
