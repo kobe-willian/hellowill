@@ -1,0 +1,115 @@
+.fourth-component {
+  background-color: #FEFEFE;
+}
+
+.fourth-component * {
+  color: #FEFEFE;
+}
+
+.fourth-component .component__content {
+  display: grid;
+  grid-template-rows: repeat(3, calc(100vh / 3));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "a b c"
+  "d title e"
+  "f g h";
+  height: 100%;
+}
+
+.fourth-component .component__title,
+.fourth-component .component__project {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.fourth-component .component__title {
+  background-color: #333;
+  grid-area: title;
+}
+
+.fourth-component .component__project {
+  cursor: pointer;
+  position: relative;
+}
+
+.fourth-component .component__project .image {
+  max-width: 150px;
+  width: 50%;
+}
+
+.fourth-component .component__project .project-shadow {
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: .3s ease-out;
+  width: 100%;
+}
+
+.fourth-component .component__project:hover .project-shadow {
+  opacity: .5;
+}
+
+.fourth-component .project-a {
+  background-color: #FEFEFE;
+  grid-area: a;
+}
+
+.fourth-component .project-b {
+  background-color: #EFEFEF;
+  grid-area: b;
+}
+
+.fourth-component .project-c {
+  background-color: #DDD;
+  grid-area: c;
+}
+
+.fourth-component .project-d {
+  background-color: #EFEFEF;
+  grid-area: d;
+}
+
+.fourth-component .project-e {
+  background-color: #FEFEFE;
+  grid-area: e;
+}
+
+.fourth-component .project-f {
+  background-color: #DFDFDF;
+  grid-area: f;
+}
+
+.fourth-component .project-g {
+  background-color: #FEFEFE;
+  grid-area: g;
+}
+
+.fourth-component .project-g .image {
+  height: 90px;
+  max-width: 90px;
+}
+
+.fourth-component .project-h {
+  background-color: #EFEFEF;
+  grid-area: h; 
+}
+
+@media only screen and (max-width: 600px) {
+  .fourth-component .component__content {
+    width: 100%;
+  }
+  
+  .fourth-component .component__title * {
+    font-size: 22px;
+  }
+
+  .fourth-component .project-g .image {
+    height: 70px;
+    width: 70px;
+  }
+}

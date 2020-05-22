@@ -1,0 +1,81 @@
+.fifth-component {
+  align-items: center;
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+}
+
+.fifth-component * {
+  color: #FEFEFE;
+}
+
+.fifth-component .component__title {
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.fifth-component .component__social {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.fifth-component .component__social .social {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.fifth-component .component__social .icon {
+  height: 50px;
+  width: 50px;
+}
+
+.fifth-component .component__social .social-email {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.fifth-component .component__social .social-email .icon {
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .fifth-component .component__title {
+    padding-bottom: 60px;
+  }
+  
+  .fifth-component .component__social {
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    grid-template-areas:
+    "linkedin"
+    "github"
+    "email";
+  }
+
+  .fifth-component .component__social .social-email {
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    grid-area: email;
+  }
+
+  .fifth-component .component__social .social-linkedin {
+    grid-area: linkedin;
+  }
+
+  .fifth-component .component__social .social-github {
+    grid-area: github;
+  }
+  
+  .fifth-component .component__social .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .fifth-component .component__social .social-email * {
+    text-align: center;
+  }
+}
